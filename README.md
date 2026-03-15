@@ -31,16 +31,7 @@ Descarga el instalador desde la sección de **Releases**.
 ### 📱 Android
 *Versión móvil en desarrollo. ¡Próximamente!*
 
-## 🛠️ Entorno de Desarrollo
 
-Si prefieres ejecutar el código fuente directamente:
-
-1. Clona el repositorio:
-   `git clone https://github.com/robertotejado/inventario_activos.git`
-2. Instala los requerimientos:
-   `pip install openpyxl`
-3. Ejecuta la aplicación:
-   `python inventario.py`
 
 ## 👨‍💻 Autor y Licencia
 
