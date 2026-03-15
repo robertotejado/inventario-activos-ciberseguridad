@@ -4,6 +4,21 @@ Una herramienta de escritorio multiplataforma diseñada para facilitar a los aud
 
 Desarrollada en **Python** con una interfaz moderna tipo **Fluent/WinUI 3**, ofrece una base de datos local y autónoma (sin dependencias en la nube) orientada a la privacidad.
 
+---
+
+## 📸 Vistas de la Aplicación
+
+El inventario cuenta con dos temas visuales (Estándar y Retro) para adaptarse a tus preferencias. 
+
+| Tema Estándar (WinUI Light) | Tema Retro (Dark Mode) |
+| :---: | :---: |
+| **Dashboard Analítico** | **Dashboard Analítico** |
+| ![Dashboard Claro](InventarioActivos_dashboard.png) | ![Dashboard Oscuro](InventarioActivos_Retro_dashboard.png) |
+| **Módulo OT / Industrial** | **Módulo OT / Industrial** |
+| ![OT Claro](InventarioActivos_OT_Industrial.jpg) | ![OT Oscuro](InventarioActivos_Retro_OT_Industrial.png) |
+
+---
+
 ## ✨ Características Principales
 
 * **Cumplimiento ENS (RD 311/2022):** Valoración integrada de las 5 dimensiones (Disponibilidad, Integridad, Confidencialidad, Autenticidad, Trazabilidad).
@@ -31,7 +46,7 @@ Descarga el instalador desde la sección de **Releases**.
 ### 📱 Android
 *Versión móvil en desarrollo. ¡Próximamente!*
 
-
+---
 
 ## 👨‍💻 Autor y Licencia
 
