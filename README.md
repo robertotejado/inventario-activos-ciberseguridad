@@ -15,7 +15,7 @@ El inventario cuenta con dos temas visuales (Estándar y Retro) para adaptarse a
 | **Dashboard Analítico** | **Dashboard Analítico** |
 | ![Dashboard Claro](InventarioActivos_dashboard.png) | ![Dashboard Oscuro](InventarioActivos_Retro_dashboard.png) |
 | **Módulo OT / Industrial** | **Módulo OT / Industrial** |
-| ![OT Claro](InventarioActivos_OT_Industrial.jpg) | ![OT Oscuro](InventarioActivos_Retro_OT_Industrial.png) |
+| ![OT Claro](InventarioActivos_OT_Industrial.png) | ![OT Oscuro](InventarioActivos_Retro_OT_Industrial.png) |
 
 ---
 
