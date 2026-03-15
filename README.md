@@ -43,8 +43,41 @@ Descarga el instalador desde la sección de **Releases**.
 3. Si faltan dependencias, ejecuta:
    `sudo apt-get install -f`
 
-### 📱 Android
-*Versión móvil en desarrollo. ¡Próximamente!*
+## 📱 Versión Android (Multiplataforma 100%)
+
+Porque los auditores también te pillan en los pasillos o en la planta de producción, aquí tienes la versión nativa para Android. Mantiene la misma filosofía: cero nubes, cero suscripciones y 100% local (Zero Cloud Data).
+
+Y como no podía ser de otra forma, la app móvil también viene con los dos sabores para que instales el que más rabia te dé (puedes instalar ambos, no se pisan entre ellos):
+
+### 🕶️ Modo Retro / Dark (Neon Synthwave)
+Para clasificar activos de red como si estuvieras hackeando el mainframe de una megacorporación en 1985.
+
+<p align="center">
+  <img src="Screenshot_2026-03-15-20-00-10-341_com.robertotejado.inventario.jpg" width="45%">
+  <img src="Screenshot_2026-03-15-20-00-17-402_com.robertotejado.inventario.jpg" width="45%">
+</p>
+
+### 👔 Modo Oficina / Claro (Corporate Compliance)
+Una interfaz limpia, clarita y formal. Ideal para cuando tienes al CISO o al jefe mirando por encima del hombro y necesitas parecer institucional.
+
+<p align="center">
+  <img src="Screenshot_2026-03-15-20-00-24-674_com.robertotejado.inventario.office.jpg" width="45%">
+  <img src="Screenshot_2026-03-15-20-00-27-891_com.robertotejado.inventario.office.jpg" width="45%">
+</p>
+
+---
+
+### 📥 Descarga e Instalación (.apk)
+
+Tienes los instaladores listos en la pestaña de **Releases** de este repositorio.
+
+Al ser una herramienta libre y no estar en la Google Play Store, la instalación se hace mediante *sideloading* (descarga directa):
+
+1. Descarga el archivo que prefieras:
+   * `Inventario_Activos_Retro.apk` (Versión Oscura)
+   * `Inventario_Activos_Oficina.apk` (Versión Clara)
+2. Abre el archivo en tu móvil Android.
+3. Si el sistema te lo pide, acepta el permiso para **"Instalar aplicaciones de orígenes desconocidos"** (tranquilo, el código es 100% abierto y lo puedes revisar aquí mismo).
 
 ---
 
