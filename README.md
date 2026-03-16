@@ -79,6 +79,54 @@ Al ser una herramienta libre y no estar en la Google Play Store, la instalación
 2. Abre el archivo en tu móvil Android.
 3. Si el sistema te lo pide, acepta el permiso para **"Instalar aplicaciones de orígenes desconocidos"** (tranquilo, el código es 100% abierto y lo puedes revisar aquí mismo).
 
+## 🌐 Versión Web (PHP)
+
+Además de la versión de escritorio, este proyecto incluye una versión web completa diseñada para ser alojada en un servidor interno (Intranet) o en la nube. Está pensada para equipos de ciberseguridad y administradores de sistemas que necesitan acceso concurrente al inventario desde cualquier dispositivo.
+
+### 📸 Vistazo a la Interfaz
+
+**Dashboard Resumen (Métricas ENS / NIS2)**
+![Dashboard](dashboard.jpg)
+
+**Gestión de Hardware IT**
+![Hardware IT](hardwareIT.png)
+
+**Módulo Específico para OT / Industrial (Modelo Purdue y Air-gap)**
+![OT / Industrial](ot-industrial.png)
+
+**Control de Licencias de Software**
+![Software](software.png)
+
+**Acceso Seguro y Cambio de Contraseña Obligatorio (Tema Retrowave 🌙)**
+![Login](login.png)
+![Cambio de Contraseña](nueva_contraseña.png)
+
+### ✨ Características Principales
+
+* **Cumplimiento Normativo Integrado:** Clasificación de activos preparada para auditorías del **Esquema Nacional de Seguridad (ENS - RD 311/2022)** (dimensiones D, I, C, A, T) y la directiva europea **NIS2** (RTO, cadena de suministro, dependencias).
+* **Gestión de Entornos IT y OT:** Pestañas dedicadas para Hardware, Software y un módulo especial para **Tecnología de Operaciones (OT / ICS)** con mapeo del Nivel Purdue, segmentación IT/OT y evaluación de riesgos *Safety*.
+* **Exportación Avanzada:** * 📊 **Excel (.xlsx):** Generación nativa de archivos Excel con pestañas separadas y un Dashboard resumen.
+  * 📄 **PDF:** Informes maquetados y listos para imprimir utilizando la librería `mPDF`.
+* **Control de Acceso (RBAC):** Sistema de usuarios con roles definidos (Administrador, Editor, Lector) y registro de auditoría (logs) de las acciones realizadas.
+* **Dual Theme:** Interfaz de usuario fluida con cambio en tiempo real entre un modo profesional claro (**Fluent Design ☀️**) y un modo oscuro inmersivo (**Retrowave 🌙**).
+
+### 🛠️ Stack Tecnológico
+
+* **Backend:** PHP 8.2+ (Nativo, sin frameworks pesados para máxima velocidad).
+* **Base de datos:** PDO (Compatible con SQLite / MySQL).
+* **Frontend:** HTML5, CSS3 (Variables CSS nativas) y Vanilla JavaScript.
+* **Dependencias:** `mPDF` (vía Composer) para la generación de PDFs.
+
+### 🚀 Instalación y Despliegue (Entorno XAMPP/Apache)
+
+1. **Clonar el repositorio** dentro de la carpeta pública de tu servidor web (ej. `C:\xampp\htdocs\inventario_web`).
+2. **Habilitar extensiones PHP:** Asegúrate de que las siguientes extensiones estén descomentadas en tu archivo `php.ini`:
+   * `extension=zip` (Para exportar el Excel).
+   * `extension=gd` y `extension=mbstring` (Para que mPDF procese correctamente el PDF).
+   * *Recuerda reiniciar Apache después de modificar el `php.ini`.*
+3. **Instalar dependencias:** Abre la terminal en la carpeta del proyecto y ejecuta:
+   ```bash
+   composer require mpdf/mpdf
 ---
 
 ## 👨‍💻 Autor y Licencia
