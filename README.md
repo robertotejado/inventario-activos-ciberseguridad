@@ -86,7 +86,7 @@ Además de la versión de escritorio, este proyecto incluye una versión web com
 ### 📸 Vistazo a la Interfaz
 
 **Dashboard Resumen (Métricas ENS / NIS2)**
-![Dashboard](dashboard.jpg)
+![Dashboard](dashboard.png)
 
 **Gestión de Hardware IT**
 ![Hardware IT](hardwareIT.png)
