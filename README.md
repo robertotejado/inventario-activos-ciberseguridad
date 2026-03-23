@@ -127,6 +127,81 @@ Además de la versión de escritorio, este proyecto incluye una versión web com
 3. **Instalar dependencias:** Abre la terminal en la carpeta del proyecto y ejecuta:
    ```bash
    composer require mpdf/mpdf
+
+🖥️ PC Audit to CSV Converters
+
+Este repositorio contiene scripts en Python diseñados para procesar, limpiar y estructurar los reportes generados por herramientas gratuitas de auditoría de hardware y software (Free PC Audit y WinAudit).
+
+El objetivo principal de estos scripts es transformar los datos crudos de las auditorías en archivos CSV limpios, normalizados y listos para ser importados en la  herramienta  de gestión de activos, añadiendo además una capa interactiva para catalogar los activos según normativas de seguridad.
+🚀 Características Principales
+
+    Extracción Inteligente: Identifica y separa automáticamente la información de Hardware (Hostname, SO, CPU, RAM, Discos, IP, MAC, Número de Serie) y Software instalado.
+
+    Limpieza de Ruido (Software): * Elimina coletillas de arquitectura (64-bit, x86, etc.).
+
+        Filtra aplicaciones innecesarias para el inventario (ej. [Store App], runtimes secundarios de C++).
+
+        Agrupa y unifica versiones de software idéntico instalado en el mismo equipo (ej. unifica las distintas versiones de Python o Microsoft Edge).
+
+    Métricas de Seguridad y Continuidad (Interactivas): Al ejecutar el script, se solicitan datos interactivos con validación de entrada para catalogar el activo:
+
+        Criticidad (Baja, Media, Alta).
+
+        ENS (Esquema Nacional de Seguridad): Dimensiones de Disponibilidad, Integridad, Confidencialidad, Autenticidad y Trazabilidad.
+
+        RTO (Recovery Time Objective).
+
+        Criticidad del Proveedor.
+
+        Ubicación, Responsable y Dependencias.
+
+    Generación de Archivos Separados: Produce dos archivos CSV independientes por cada máquina auditada: uno para Hardware (HW_*.csv) y otro para Software (SW_*.csv).
+
+📁 Scripts Incluidos
+1. FreePCAudit2CSV.py
+
+Procesa los archivos de texto plano (.txt) generados por Free PC Audit. Utiliza expresiones regulares para localizar bloques específicos de hardware, red y la lista de software instalado.
+2. WinAudit2CSV.py
+
+Procesa los archivos en formato .csv generados por WinAudit. Realiza una lectura binaria inteligente para evitar problemas de codificación (utf-8, utf-16, latin-1), detecta automáticamente el separador y filtra los datos basándose en los códigos de WinAudit (ej. 300 para Hardware, 500 para Software).
+🛠️ Requisitos
+
+    Python 3.x
+
+    Librería pandas
+
+Puedes instalar las dependencias necesarias ejecutando:
+Bash
+
+pip install pandas
+
+📖 Modo de Uso
+
+    Realiza la auditoría en el equipo cliente usando Free PC Audit (exportando a .txt) o WinAudit (exportando a .csv).
+
+    Coloca el archivo generado en la misma carpeta que el script.
+
+    Ejecuta el script correspondiente desde la terminal:
+    Bash
+
+    python FreePCAudit2CSV.py
+    # o
+    python WinAudit2CSV.py
+
+    El script te pedirá el nombre del archivo de origen por consola.
+
+    Responde a las preguntas interactivas para rellenar los metadatos de asignación y seguridad (Criticidad, ENS, etc.).
+
+    Recoge tus archivos HW_...csv y SW_...csv listos para importar.
+
+📊 Estructura de Salida
+
+Ambos scripts generan archivos con codificación UTF-8-SIG (compatible con Excel y bases de datos) con las siguientes columnas estándar:
+
+    Hardware: id, categoria, tipo, marca, modelo, serie, hostname, ip_mac, so, asignado, ubicacion, estado, criticidad, ens_d, ens_i, ens_c, ens_a, ens_t, rto, crit_prov, dependencias, fecha, notas
+
+    Software: id, nombre, fabricante, version, categoria, tipo_lic, cantidad, clave, caducidad, responsable, ubicacion, criticidad, ens_c, ens_i, ens_d, rto, crit_prov, dependencias, notas
+    
 ---
 
 ## 👨‍💻 Autor y Licencia
