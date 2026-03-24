@@ -194,13 +194,7 @@ pip install pandas
 
     Recoge tus archivos HW_...csv y SW_...csv listos para importar.
 
-📊 Estructura de Salida
 
-Ambos scripts generan archivos con codificación UTF-8-SIG (compatible con Excel y bases de datos) con las siguientes columnas estándar:
-
-    Hardware: id, categoria, tipo, marca, modelo, serie, hostname, ip_mac, so, asignado, ubicacion, estado, criticidad, ens_d, ens_i, ens_c, ens_a, ens_t, rto, crit_prov, dependencias, fecha, notas
-
-    Software: id, nombre, fabricante, version, categoria, tipo_lic, cantidad, clave, caducidad, responsable, ubicacion, criticidad, ens_c, ens_i, ens_d, rto, crit_prov, dependencias, notas
     
 ---
 
