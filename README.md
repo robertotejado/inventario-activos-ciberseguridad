@@ -195,6 +195,47 @@ pip install pandas
     Recoge tus archivos HW_...csv y SW_...csv listos para importar.
 
 
+
+
+
+# 🛠️ WinAudit & FreePCAudit Extractor
+
+Un conjunto de scripts en Python diseñados para procesar, limpiar y estandarizar los reportes de auditoría generados por **WinAudit** y **Free PC Audit**. 
+
+Este proyecto nace de la necesidad de transformar volcados de texto plano o CSVs desordenados en tablas limpias y estructuradas, listas para ser importadas directamente en el sistemas de gestión de activos.
+## ✨ Características principales
+
+* **Soporte Dual:** Funciona tanto con los archivos `.txt` generados por FreePCAudit como con los `.csv` generados por WinAudit.
+* **Extracción Inteligente de Hardware:** Captura automáticamente el Hostname, Marca, Modelo, Número de Serie, Sistema Operativo, Tipo de Chasis (Portátil/Sobremesa) y los datos de CPU, RAM y Disco duro.
+* **Mapeo de Red:** Busca y asocia automáticamente la dirección IP IPv4 y la dirección MAC de la interfaz de red que esté conectada en ese momento.
+* **Limpieza Profunda de Software:** * Omite automáticamente las aplicaciones de la tienda de Windows (`[Store App]`).
+  * Elimina el "ruido" como los Runtimes adicionales o mínimos de Microsoft Visual C++.
+  * Agrupa y unifica versiones de programas clave (como Python o Microsoft Edge/WebView2).
+  * Agrupa el software por nombre y fabricante para evitar duplicados en la lista.
+* **Generación Dinámica y Ordenada:** Crea automáticamente carpetas (`/WinAudit` o `/FreePCAudit`) y nombra los archivos de salida incluyendo la fecha actual y la herramienta de origen (ej. `Mipc_HW_25-03-2026_freepcaudit.csv`).
+* **Modo Interactivo:** Te pide por consola la información de negocio que la máquina no puede saber (Responsable/Asignado y Ubicación) para añadirla directamente a las tablas.
+
+## 🚀 Requisitos
+
+Necesitarás tener instalado Python 3.x y la librería `pandas`. Puedes instalar la dependencia fácilmente con:
+
+```bash
+pip install pandas
+```
+
+## ⚙️ Cómo se usa
+
+1. Extrae el contenido de `WinAudit and FreePCAudit Extractor.rar`.
+2. Coloca tu reporte (`.txt` para FreePCAudit o `.csv` para WinAudit) en la misma carpeta que los scripts.
+3. Ejecuta el script correspondiente desde tu terminal:
+   ```bash
+   python extract_info_from_freepcaudit.py
+   # o
+   python WinAudit2CSV.py
+   ```
+4. El script te pedirá el nombre del archivo origen, a quién está asignado el equipo y su ubicación.
+5. ¡Listo! Revisa la nueva carpeta generada; tendrás dos archivos CSV (`HW` para Hardware y `SW` para Software) listos para importar.
+
     
 ---
 
